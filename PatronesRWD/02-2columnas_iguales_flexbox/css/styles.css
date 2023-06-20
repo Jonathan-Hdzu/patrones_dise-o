@@ -1,0 +1,67 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.entrada-blog a {
+    display: inline-block;
+    background-color: #2196F3;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* ¿Por qué con flexbox cambia la posición sin nosotros haberle acomodado o especificado algo? esto es porque todos los elementos hijos se acomodan de izquierda a derecha */
+/** CODIGO AQUI **/
+@media (min-width: 768px) {
+    .dos-columnas {
+        display: flex;
+        /* Siempre tenemos que especificar el posicionado de izquierda a derecha con esta propiedad. Lo que hace es colocar un elemento a la izquierda y otro a la derecha dejando el centro libre */
+        justify-content: space-between;
+        /* De la ultima version de CSS se ha agregado un grap. EL problema de esta sintaxis es que no tiene soporte del 100% como la sintaxis de abajo. La otra los navegadores  */
+    }
+
+    /* Anteriormente se utilizaba una sintaxis distinta o es de las mas conocidas:
+    
+    Teniamos que crear otra clase y apuntar hacia ella
+    .entrada-blog {
+        1. Flex-basis
+            flex-basis: calc( 50% - 1rem);
+            "Quiero que midas el 50% pero como tendra cierta separacion restale un rem"
+        2. Flex
+            Es quitarle el flex:
+            flex: factorDeCrecimiento factorDeHacerloPequeño y su tamaño base que es lo de basis 
+            flex: 0 0 calc( 50% - 1rem);
+    */
+    .entrada-blog {
+        flex-basis: calc( 50% - 1rem);
+    }
+}
