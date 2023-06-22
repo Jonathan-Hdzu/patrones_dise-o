@@ -43,11 +43,12 @@ h1 {
     .tres-columnas {
         display: flex;
         /* Podemos hacerlo con 2 lineas de codigo usando gap, pero tenemos que tener en cuenta la compatibilidad. En esta fecha es compatible con todos los navegadores menos IE en su ultima version. Ya tiene un soporte del 94% */
-       
-        /* justify-content: space-between;  */
-        gap: 1rem; 
+        justify-content: space-between;  
+        gap: 2rem;
+        
     }
+    /* Si no nos interesa los usuarios de iphone o ipad omitimos lo siguiente */
     /* .entrada-blog {
-        flex: 0 0 calc(33.3% - 1rem);
+    flex: 0 0 calc(33.3% - 1rem);
     } */
 }
