@@ -48,3 +48,25 @@ p {
 }
 
 /** CODIGO AQUI **/
+@media (min-width: 768px) {
+    .con-sidebar {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        column-gap: 4rem;
+        /* Practicamente le estamos dejando a grid el acomodo. Le estamos diciendo que coloque el contenido automaticamente en columnas donde hayan espacios disponibles ahi coloca el contenido. Los elementos se colocan automáticamente en columnas, llenando las celdas de una columna antes de pasar a la siguiente*/
+        grid-auto-flow: column;
+    }
+    aside {
+        grid-column: 2 / 3;
+
+    }
+    /* Otra manera de solucionar el posicionamiento 
+    aside {
+        grid-column: 1 / 2;
+        grid-row:  1 / 2;
+    }
+    article {
+        grid-column: 2 / 3;
+    }
+    */
+}

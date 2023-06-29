@@ -49,3 +49,21 @@ p {
 
 
 /** CODIGO AQUI **/
+@media (min-width: 768px) {
+    .con-sidebar {
+        display: flex;
+        /* justify-content: space-between; Esta comentado porque si tenemos un gap no es necesario ponerlo al menos que haya un calc*/
+        gap: 3rem;
+    }
+    /* por cada pixel que mida reciba el aside el article recibe 3. Esto en un espacio disponible. Por eso, el article mide 900 px mientras que el aside 300 */
+    aside {
+        /* Tambien podemos usar la siguiente propiedad
+        flex: 0 0 calc(33.3% - 1rem)
+        flex: 0 0 calc(66.6% - 1rem)
+        */
+        flex: 1;
+    }
+    article {
+        flex: 3;
+    }
+}
