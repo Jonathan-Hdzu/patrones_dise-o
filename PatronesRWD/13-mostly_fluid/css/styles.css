@@ -37,3 +37,29 @@ p {
 }
 
 /** CODIGO AQUI **/
+
+.contenedor {
+    /* No se recomienda dejar fijo el tamaño dado que al momento de realizar cambios en la pantalla puede que necesitemos hacer scroll, por lo que es mejor dejarlo con porcentajes para que fluya
+    width: 1200px;
+    */
+    width: 95%;
+    /* 0 arriba, del lado derecho sera automatico y del lado izquierdo automatico */
+    margin: 0 auto;
+    max-width: 120rem;
+}
+/* Toda la vida seran imagenes responsive porque podra fluir bien  */
+img {
+    width: 100%;
+}
+
+/* Poniendo un ejemplo del uso de max width:
+En este caso, si el ancho de la ventana del navegador es lo suficientemente grande para acomodar un ancho total de 900px para el elemento hijo, ocupará ese ancho y el espacio restante se distribuirá a ambos lados del elemento dentro del contenedor principal.
+
+Por ejemplo, si el ancho total del contenedor es de 1000px, el elemento hijo ocupará los 900px y habrá 100px de espacio sobrante (50px a la izquierda y 50px a la derecha del elemento hijo) dentro del contenedor. Si el ancho total del contenedor es de 1200px, el elemento hijo aún ocupará 900px, pero habrá 300px de espacio sobrante (150px a la izquierda y 150px a la derecha del elemento hijo) dentro del contenedor. 
+
+Entonces por ese caso es que centra los elementos dado que se distribuye tanto a la derecha como a la izquierda el espacio disponible
+
+Algunas personas utilizqan media queries combinado con max y min width, es una forma de poder hacerlo también
+
+
+*/

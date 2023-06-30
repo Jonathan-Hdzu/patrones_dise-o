@@ -50,3 +50,12 @@ p {
 }
 
 /** CODIGO AQUI **/
+/* En este caso al mover la pantalla el titulo de la misma es pequeño por default, pero si acomodamos el mismo con el patrón de tiny tweaks especificamos que en cierto punto la fuente cambie. Son pequeños ajustes al código dependiendo de la pantalla */
+h1 {
+    text-align: center;
+}
+@media (min-width: 768px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
